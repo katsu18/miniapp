@@ -1,0 +1,30 @@
+
+%div.wallpaper
+  .contents
+    - @kizi.each.with_index do |b,i|
+      .contents__date
+        %p投稿日　：
+        =b.created_at
+      .contents__bloguser
+        %p投稿者　：
+        =b.user.email
+      .contents__blogtitle
+        %pタイトル：
+        =b.title
+      .contents__blogcontents
+        =simple_format(b.blog)
+        - if user_signed_in? && current_user.id == b.user_id
+          .edit
+            = form_tag("/blog/#{b.id}", method: :patch) do
+              %textarea{:cols => "40", :name => "blog", :placeholder => "text", :rows => "4"}= b.blog
+              %input{:type => "submit", :value => "SENT"}/
+          .contens__btn
+            .btn-edit
+              .btn-edit-text
+                #p edit
+            .btn-delete
+              .btn-delete-text
+                = link_to '削除', "/blog/#{b.id}", method: :delete
+          
+
+  = paginate @kizi

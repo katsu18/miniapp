@@ -1,0 +1,122 @@
+
+*{
+	
+	text-decoration: none;
+}
+a:visited{
+	color:black;
+}
+header{
+	width: 100%;
+	height: 100px;
+	background-color: #38aef0;
+	color: white;
+	.header__boxes{
+		height: 90px;
+		width: 100%;
+		font-weight: bold;
+		font-size:25px;
+		&__title{
+			height: 30px;
+			padding:  30px 10px;
+			float: left;
+			display: block;
+		}
+		&__login{
+			height: 30px;
+			padding: 30px 10px;
+			float: right;
+			display: block;
+		}
+	}
+}
+
+.wallpaper{
+	padding: 5px;
+	background-color: lightgoldenrodyellow;
+	
+		.contents{
+			width: 80%;
+			margin: 0 auto ;
+			text-align: left;
+			&__date{
+				margin:5px 0 0 0;
+				border-radius: 10px 10px 0px 0px / 10px 10px 0px 0px;
+				padding: 5px;
+				font-size:10px;
+				background-color: rgb(181, 255, 255);
+				display: flex;
+			}
+			&__bloguser{
+				padding: 5px;
+				font-size: 10px;
+				background-color: rgb(181, 225, 255) ;
+				display: flex;
+			}
+			&__blogtitle{
+				padding: 5px;
+				font-size:10px;
+				background-color: rgb(181, 200, 255) ;
+				display: flex;
+			}
+			&__blogcontents{
+				border-radius: 0px 0px 10px 10px / 0px 0px 10px 10px;
+				padding: 5px;
+				font-size: 20px;
+				background-color: rgb(181, 175, 255);
+				line-height: 2.3em;
+				
+				.contens__btn{
+					height: 30px;
+					width: 100px;
+					display: flex;
+					font-size: 15px;
+					margin: 0 0 0 auto;
+					.btn-edit{
+						height: 100%;
+						width: 50%;
+						padding: 3px;
+						.btn-edit-text{
+						display: inline;
+						}
+					}
+					.btn-delete{
+						height: 100%;
+						width: 50%;
+						padding: 3px;
+						.btn-delete-text{
+						display: inline;
+						}
+					}
+				}
+			}
+		}
+}
+footer{
+	width: 100%;
+	height: 20px;
+	background-color: #38aef0;
+	color: white;
+	font-size:10px;
+	bottom: 0;
+	.footer__boxes{
+		width: 100％;
+		font-weight: bold;
+		text-align: right;
+		padding: 2.5px 10px;
+
+	}
+}
+
+.row{
+	width: 100%;
+	height: 100%;
+	#fm{
+		text-align: center;
+	}
+	#subm{
+		width: 300px;
+		margin: 0 auto;
+		text-align: right;
+	}
+}
